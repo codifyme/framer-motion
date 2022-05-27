@@ -1,14 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { motion } from "framer-motion"
 
 export default function Box1() {
-  return (
+
+    const[isAnimating, setIsAnimating]=useState(false)
+
+    return (
     <div className="box-container">
       <motion.div 
         className="box"
         animate={{
-            x:500,
-            opacity:1
+            x:isAnimating ? 800 : 0,
+            opacity:isAnimating ? 1 : 0.5,
+            rotate: isAnimating ? 360 : 0
       }}
       initial={{
           opacity:0.1
@@ -16,8 +20,8 @@ export default function Box1() {
       transition={{
           type:"spring",
           stiffness:60
-
       }}
+      onClick={()=>setIsAnimating(!isAnimating)}
       >
       
       </motion.div>
