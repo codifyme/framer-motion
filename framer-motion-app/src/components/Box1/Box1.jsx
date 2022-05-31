@@ -10,7 +10,7 @@ export default function Box1() {
       <motion.div 
         className="box"
         animate={{
-            x:isAnimating ? 800 : 0,
+            x:isAnimating ? 700 : 0,
             opacity:isAnimating ? 1 : 0.5,
             rotate: isAnimating ? 360 : 0
       }}
