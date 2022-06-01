@@ -20,3 +20,13 @@
   align-items:center;
   justify-content: center;
 }
+
+.boxItem{
+  width:0.5rem;
+  height:0.5rem;
+  background-color: white;
+  padding:2rem;
+  list-style-type: style none;
+  margin: 0.5em;
+
+}
